@@ -1,0 +1,1 @@
+'use strict'; const Constants = { URL: { root: 'https://www.vwthemes.com' }, Keys: { ConsumeKey: 'ck_7608757fa37a6429107dc675a366ea0a3ce58125', ConsumerSecret: 'cs_acc0028248bd1001afdbc0800c53456b45f9512a' }, }; module.exports = Constants;

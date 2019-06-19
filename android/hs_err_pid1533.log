@@ -1,0 +1,54 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 12288 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2643), pid=1533, tid=0x00007fd8fa5b3700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_162-b12) (build 1.8.0_162-8u162-b12-0ubuntu0.16.04.2-b12)
+# Java VM: OpenJDK 64-Bit Server VM (25.162-b12 mixed mode linux-amd64 compressed oops)
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fd908001000):  JavaThread "SIGINT handler" daemon [_thread_new, id=1616, stack(0x00007fd8fa4b3000,0x00007fd8fa5b4000)]
+
+Stack: [0x00007fd8fa4b3000,0x00007fd8fa5b4000],  sp=0x00007fd8fa5b2b70,  free space=1022k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xa6d16b]
+V  [libjvm.so+0x4c698c]
+V  [libjvm.so+0x8b99cc]
+V  [libjvm.so+0x8b400e]
+V  [libjvm.so+0x8baf17]
+V  [libjvm.so+0xa11a47]
+V  [libjvm.so+0x8b7222]
+C  [libpthread.so.0+0x76ba]  start_thread+0xca
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x00007fd908001000 JavaThread "SIGINT handler" daemon [_thread_new, id=1616, stack(0x00007fd8fa4b3000,0x00007fd8fa5b4000)]
+  0x00007fd90cbfb800 JavaThread "Forward streams with process: command 'node' Thread 3" [_thread_in_native, id=1573, stack(0x00007fd8fa2b1000,0x00007fd8fa3b2000)]
+  0x00007fd90c5cc000 JavaThread "Forward streams with process: command 'node' Thread 2" [_thread_in_native, id=1572, stack(0x00007fd8fa3b2000,0x00007fd8fa4b3000)]
+  0x00007fd92cf3b800 JavaThread "Run command 'node'" [_thread_blocked, id=1568, stack(0x00007fd8fa6b5000,0x00007fd8fa7b6000)]
+  0x00007fd92d32e800 JavaThread "File lock request listener" [_thread_in_native, id=1558, stack(0x00007fd8fc24b000,0x00007fd8fc34c000)]
+  0x00007fd92c356000 JavaThread "process reaper" daemon [_thread_in_native, id=1557, stack(0x00007fd8fc34c000,0x00007fd8fc385000)]
+  0x00007fd92c0a9800 JavaThread "Service Thread" daemon [_thread_blocked, id=1553, stack(0x00007fd9303e5000,0x00007fd9304e6000)]
+  0x00007fd92c0a6000 JavaThread "C1 CompilerThread1" daemon [_thread_in_vm, id=1552, stack(0x00007fd9304e6000,0x00007fd9305e7000)]
+  0x00007fd92c0a4000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=1551, stack(0x00007fd9305e7000,0x00007fd9306e8000)]
+  0x00007fd92c0a2000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=1550, stack(0x00007fd9306e8000,0x00007fd9307e9000)]
+  0x00007fd92c07b000 JavaThread "Finalizer"
